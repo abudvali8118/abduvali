@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapallar</title>
+    <link rel="stylesheet" href="{% static 'zapal.css' %}">
+</head>
+<body>
+    {% for i in zapallar %}
+    <div class="section">
+        <div class="image">
+            <img src="{{i.img.url}}" alt="Description">
+        </div>
+        <div class="content">
+            <h2>{{i.ism}}</h2>
+            <p>{{i.text}}</p>
+            <button>Zapallar Tayorlaymiz</button>
+        </div>
+    </div>
+    {% endfor %}
+</body>
+</html>
